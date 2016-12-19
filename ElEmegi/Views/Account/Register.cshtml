@@ -1,0 +1,98 @@
+﻿@model ElEmegi.Models.musteriler
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Register</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>musteriler</legend>
+        @if (ViewBag.Message != null)
+        {
+            <div class="form-group">
+                <div class="col-md-10">@ViewBag.Message</div>
+            </div>
+        }
+        <div class="editor-label">
+            @Html.LabelFor(model => model.musteri_adi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.musteri_adi)
+            @Html.ValidationMessageFor(model => model.musteri_adi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.musteri_soyadi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.musteri_soyadi)
+            @Html.ValidationMessageFor(model => model.musteri_soyadi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.eposta)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.eposta)
+            @Html.ValidationMessageFor(model => model.eposta)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.adres)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.adres)
+            @Html.ValidationMessageFor(model => model.adres)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.telefon)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.telefon)
+            @Html.ValidationMessageFor(model => model.telefon)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.tarih)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.tarih)
+            @Html.ValidationMessageFor(model => model.tarih)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.kullanici_adi)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.kullanici_adi)
+            @Html.ValidationMessageFor(model => model.kullanici_adi)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.sifre)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.sifre)
+            @Html.ValidationMessageFor(model => model.sifre)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@
