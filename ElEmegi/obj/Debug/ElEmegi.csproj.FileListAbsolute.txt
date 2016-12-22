@@ -74,3 +74,8 @@ C:\Users\Ramazan\Documents\GitHub\El_Emegi\ElEmegi\bin\System.Web.WebPages.Razor
 C:\Users\Ramazan\Documents\GitHub\El_Emegi\ElEmegi\obj\Debug\ElEmegi.csprojResolveAssemblyReference.cache
 C:\Users\Ramazan\Documents\GitHub\El_Emegi\ElEmegi\obj\Debug\ElEmegi.dll
 C:\Users\Ramazan\Documents\GitHub\El_Emegi\ElEmegi\obj\Debug\ElEmegi.pdb
+C:\Users\Ramazan\Documents\GitHub\El_Emegi\ElEmegi\bin\Antlr3.Runtime.dll
+C:\Users\Ramazan\Documents\GitHub\El_Emegi\ElEmegi\bin\System.Web.Optimization.dll
+C:\Users\Ramazan\Documents\GitHub\El_Emegi\ElEmegi\bin\WebGrease.dll
+C:\Users\Ramazan\Documents\GitHub\El_Emegi\ElEmegi\bin\Antlr3.Runtime.pdb
+C:\Users\Ramazan\Documents\GitHub\El_Emegi\ElEmegi\bin\System.Web.Optimization.xml
