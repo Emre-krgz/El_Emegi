@@ -4,10 +4,10 @@
     <title>El Emeği Admin Paneli</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
-   
-    <link href="~/Areas/Content/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Areas/Content2/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <!-- styles -->
-    <link href="~/Areas/Content/css/styles.css" rel="stylesheet">
+    <link href="~/Areas/Content2/css/styles.css" rel="stylesheet">
+ 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -42,10 +42,10 @@
                         <nav class="collapse navbar-collapse bs-navbar-collapse navbar-right" role="navigation">
                             <ul class="nav navbar-nav">
                                 <li class="dropdown">
-                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Account <b class="caret"></b></a>
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">@Session["UserID"].ToString()<b class="caret"></b></a>
                                     <ul class="dropdown-menu animated fadeInUp">
                                         <li><a href="profile.html">Profile</a></li>
-                                        <li><a href="login.html">Logout</a></li>
+                                        <li><a href="@Url.Action("Logout", "Account")">Logout</a></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -68,16 +68,16 @@
                         <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Ürün İşlemleri</a></li>
                         <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Ürün İşlemleri</a></li>
                         <li><a href="stats.html"><i class="glyphicon glyphicon-stats"></i> Ürün İşlemleri</a></li>
-                     
+
                     </ul>
                 </div>
             </div>
             @RenderBody()
         </div>
-    
+
     </div>
 
-  
+
 
     <footer>
         <div class="container">
@@ -91,7 +91,7 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="~/Areas/Content/bootstrap/js/bootstrap.min.js"></script>
-    <script src="~/Areas/Content/js/custom.js"></script>
+    <script src="~/Areas/Content2/bootstrap/js/bootstrap.min.js"></script>
+    <script src="~/Areas/Content2/js/custom.js"></script>
 </body>
 </html>

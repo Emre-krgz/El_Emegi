@@ -33,6 +33,7 @@ namespace ElEmegi.Areas.admin.Controllers
 
             if (usr != null)
             {
+                Session["UserID"] = usr.kullanici_adi.ToString();
                 FormsAuthentication.SetAuthCookie(usr.kullanici_adi, false);
                 return RedirectToAction("Index", "AdminHome");
             }
@@ -42,8 +43,9 @@ namespace ElEmegi.Areas.admin.Controllers
         }
         public ActionResult Logout()
         {
+            Session.Clear();
             FormsAuthentication.SignOut();
-            return RedirectToAction("Account", "admin");
+            return RedirectToAction("Login", "Account");
         }
 
     }
