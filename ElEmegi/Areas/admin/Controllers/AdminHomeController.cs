@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ElEmegi.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,10 +11,10 @@ namespace ElEmegi.Areas.admin.Controllers
     {
         //
         // GET: /admin/AdminHome/
-
+        ElEmegi2Context db = new ElEmegi2Context();
         public ActionResult Index()
         {
-            return View();
+            return View(db.musterilers.ToList());
         }
 
     }
