@@ -1,0 +1,68 @@
+﻿@model IEnumerable<ElEmegi.Models.Urunler>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="col-md-10">
+    <div class="content-box-large">
+        <div class="panel-heading">
+            <div class="panel-title">Bootstrap dataTables</div>
+        </div>
+        <div class="panel-body">
+            <table cellpadding="0" cellspacing="0" border="0" class="table table-striped table-bordered" id="example">
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Baslik)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Aciklama)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.ResimYol)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Fiyat)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Kategori)
+                    </th>
+                    <th></th>
+                </tr>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Baslik)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Aciklama)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ResimYol)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Fiyat)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Kategori)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                            @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                            @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                        </td>
+                    </tr>
+                }
+
+            </table>
+        </div>
+    </div>
+</div>

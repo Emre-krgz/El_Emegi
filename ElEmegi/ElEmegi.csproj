@@ -137,6 +137,7 @@
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\AccountController.cs" />
     <Compile Include="Areas\admin\Controllers\AdminHomeController.cs" />
+    <Compile Include="Areas\admin\Controllers\adminUrunController.cs" />
     <Compile Include="Areas\admin\Controllers\SharedController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\El_Emegi2Context.cs" />
@@ -1363,6 +1364,12 @@
     <Content Include="Areas\Content2\vendors\tinymce\js\tinymce\skins\lightgray\fonts\icomoon.ttf" />
     <Content Include="Areas\Content2\vendors\tinymce\js\tinymce\skins\lightgray\fonts\icomoon.woff" />
     <Content Include="Areas\Content2\vendors\tinymce\js\tinymce\skins\lightgray\fonts\readme.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\admin\Views\adminUrun\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\admin\Views\adminUrun\Create.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
