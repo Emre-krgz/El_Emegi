@@ -1,0 +1,71 @@
+﻿@model ElEmegi.Models.Urunler
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Areas/admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Urunler</legend>
+
+        @Html.HiddenFor(model => model.id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Baslik)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Baslik)
+            @Html.ValidationMessageFor(model => model.Baslik)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Aciklama)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Aciklama)
+            @Html.ValidationMessageFor(model => model.Aciklama)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ResimYol)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ResimYol)
+            @Html.ValidationMessageFor(model => model.ResimYol)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Fiyat)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Fiyat)
+            @Html.ValidationMessageFor(model => model.Fiyat)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Kategori)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Kategori)
+            @Html.ValidationMessageFor(model => model.Kategori)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@*@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}*@

@@ -1,6 +1,7 @@
 ﻿using ElEmegi.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -39,11 +40,17 @@ namespace ElEmegi.Areas.admin.Controllers
          
 
         }
-        public ActionResult Edit()
+            [HttpGet]
+        public ActionResult Edit(int id = 0)
         {
-            return View();
-
+            return View(db.Urunlers.Find(id));
         }
+            public ActionResult Edit(Urunler k)
+            {
+                db.Entry(k).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
 
     }
 }
