@@ -13,7 +13,7 @@ namespace ElEmegi.Areas.admin.Controllers
         //
         // GET: /admin/adminUrun/
         ElEmegi2Context db = new ElEmegi2Context();
-      
+
         public ActionResult Index()
         {
             return View(db.Urunlers.ToList());
@@ -37,20 +37,35 @@ namespace ElEmegi.Areas.admin.Controllers
             {
                 return View(urunler);
             }
-         
+
 
         }
-            [HttpGet]
+        [HttpGet]
         public ActionResult Edit(int id = 0)
         {
             return View(db.Urunlers.Find(id));
         }
-            public ActionResult Edit(Urunler k)
-            {
-                db.Entry(k).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        [HttpPost]
+        public ActionResult Edit(Urunler k)
+        {
+            db.Entry(k).State = EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
 
+        public ActionResult Delete(int id)
+        {
+            return View(db.Urunlers.Find(id));
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult Delete_yeni(int id)
+        {
+            Urunler ur = db.Urunlers.Find(id);
+            db.Urunlers.Remove(ur);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

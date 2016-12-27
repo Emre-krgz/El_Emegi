@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ElEmegi.Models
 {
@@ -10,7 +11,7 @@ namespace ElEmegi.Models
             this.Resimlers = new List<Resimler>();
             this.Sepets = new List<Sepet>();
         }
-
+         [Key]
         public int id { get; set; }
         public string Baslik { get; set; }
         public string Aciklama { get; set; }
