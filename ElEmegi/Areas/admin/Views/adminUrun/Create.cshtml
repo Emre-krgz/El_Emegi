@@ -7,7 +7,8 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) {
+@using (Html.BeginForm("Create", "adminUrun", FormMethod.Post, new {enctype="Multipart/form-data"  }))
+{
     @Html.AntiForgeryToken()
     @Html.ValidationSummary(true)
 
@@ -31,11 +32,10 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.ResimYol)
+          Resim
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.ResimYol)
-            @Html.ValidationMessageFor(model => model.ResimYol)
+            <input type="file" name="resim" value=" " />
         </div>
 
         <div class="editor-label">
